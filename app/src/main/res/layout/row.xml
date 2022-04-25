@@ -7,26 +7,24 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="19dp"
-        app:cardCornerRadius="20dp"
-        android:minHeight="120dp"
-        app:cardBackgroundColor="#454545">
+        app:cardCornerRadius="15dp"
+        android:minHeight="120dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/eventTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginLeft="25dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/amarante"
+                android:fontFamily="@font/acme"
                 android:text="Event"
-                android:textColor="@color/white"
+                android:textColor="#B7272727"
                 android:textSize="15sp" />
 
             <LinearLayout
@@ -60,7 +58,7 @@
                         android:layout_marginBottom="3dp"
                         android:fontFamily="@font/aladin"
                         android:text="CP-264"
-                        android:textColor="@color/white"
+                        android:textColor="#B7272727"
                         android:textSize="18sp" />
 
                     <TextView
@@ -71,7 +69,7 @@
                         android:layout_marginRight="10dp"
                         android:fontFamily="@font/amarante"
                         android:text="19/02/2021 8:30 pm"
-                        android:textColor="#a9a9a9"
+                        android:textColor="#787878"
                         android:textSize="13sp" />
                 </LinearLayout>
             </LinearLayout>

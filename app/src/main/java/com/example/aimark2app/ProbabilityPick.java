@@ -10,12 +10,12 @@ public class ProbabilityPick {
         String temp = userInput;
         String[] words = temp.split(" ");
 
-        List<String> taskList = Arrays.asList("play", "do", "can", "you", "search","set", "alarm", "search", "open", "reminder", "title", "title", "description", "description", "open", "mail", "gmail", "google", "what", "notes",
+        List<String> taskList = Arrays.asList("play", "do", "can", "you", "search","set", "start", "play", "song", "add", "add", "alarm", "search", "open", "reminder", "title", "title", "description", "description", "open", "mail", "gmail", "google", "what", "notes",
                 "know", "song", "music", "about", "about", "album", "like", "where", "my", "timer", "for");
-        List<String> questionList = Arrays.asList("give me", "may i", "what","is", "how", "who", "would", "doing", "information", "where", "created", "can", "i", "you", "invented", "what's",
+        List<String> questionList = Arrays.asList("give me", "may i", "what","is", "how", "who", "who", "do", "have", "would", "are", "my", "doing", "information", "where", "created", "can", "i", "you", "invented", "what's",
                 "how is", "weather", "today", "day", "up", "about", "current", "time", "date", "right now", "tell me", "how");
         List<String> conversationList = Arrays.asList("i'm", "i am", "are", "you", "what", "hey", "hi", "name", "real", "makes", "thank you", "sorry", "there", "excuse me", "do", "good evening", "good morning", "good night",
-                "birthday", "birthday", "is", "think", "does", "that", "what's", "up", "tell", "me", "about", "yourself", "who", "created", "you",
+                "birthday", "birthday", "is", "think", "does", "that", "what's", "up", "tell", "me", "about", "yourself", "who", "how", "are", "created", "you",
                 "never mind", "birthdate", "birth date", "birth date", "who is your", "who is your" , "i", "can't", "sleep");
 
         double probTask = 0;

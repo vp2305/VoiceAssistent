@@ -1,59 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnRecord"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Record"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#B9E4E4E4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnStop"
-        android:layout_width="86dp"
-        android:layout_height="48dp"
-        android:text="Stop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <LinearLayout
-        android:layout_width="408dp"
-        android:layout_height="655dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btnStop"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/acme"
-            android:paddingLeft="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="Sammy"
-            android:textSize="20sp" />
-
-        <ListView
-            android:id="@+id/listView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:divider="@null"
-            android:dividerHeight="0dp"></ListView>
-    </LinearLayout>
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btnStop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
+                android:id="@+id/greetingTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/amarante"
+                android:padding="10dp"
+                android:text="Good Morning"
+                android:textColor="#CB272727"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/aladin"
+                android:paddingLeft="10dp"
+                android:text= "ROUTINES"
+                android:textColor="#C3272727"
+                android:textSize="17sp"/>
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+<!--                <Button-->
+<!--                    android:id="@+id/button2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="110dp"-->
+<!--                    android:background="?android:attr/colorBackgroundCacheHint"-->
+<!--                    android:foregroundGravity="fill"-->
+<!--                    android:text="Good Morning Routine"-->
+<!--                    app:layout_column="0"-->
+<!--                    app:layout_columnWeight="1"-->
+<!--                    app:layout_gravity="fill"-->
+<!--                    app:layout_row="0"-->
+<!--                    app:layout_rowWeight="1" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/button3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="70dp"-->
+<!--                    app:layout_column="1"-->
+<!--                    app:layout_row="0"-->
+<!--                    app:layout_gravity="fill"-->
+<!--                    app:layout_columnWeight="1"-->
+<!--                    app:layout_rowWeight="1"-->
+<!--                    android:text="Good Night Routine" />-->
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="15dp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:background="@android:drawable/screen_background_dark_transparent"
+                            android:onClick="goodMorningRoutine"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/morning" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Good Morning Routine" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_height="80dp"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="15dp"
+                    app:layout_column="1"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1">
+
+                 <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                     <ImageButton
+                         android:layout_width="match_parent"
+                         android:layout_height="90dp"
+                         android:background="@android:drawable/screen_background_dark_transparent"
+                         android:onClick="goodNightRoutine"
+                         android:scaleType="fitXY"
+                         app:srcCompat="@drawable/goodnight" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Good NIGHT Routine"
+                            />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.gridlayout.widget.GridLayout>
+
+
+            <TextView
+                android:id="@+id/todayTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/aladin"
+                android:paddingLeft="10dp"
+                android:text="TODAY"
+                android:textColor="#C3272727"
+                android:textSize="17sp" />
+
+            <ListView
+                android:id="@+id/todayWeekListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:focusableInTouchMode="false"
+                android:listSelector="@android:color/transparent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/aladin"
+                android:paddingLeft="10dp"
+                android:text="THIS WEEK"
+                android:textColor="#C3272727"
+                android:textSize="17sp" />
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="70dp"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:focusableInTouchMode="false"
+                android:listSelector="@android:color/transparent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            tools:ignore="MissingConstraints">
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/btnRecord"-->
+<!--                android:layout_width="45dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:foreground="@drawable/microphone1"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.049"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:foreground="@drawable/microphone1"
+                android:onClick="recordPressed"
+                app:backgroundTint="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.049"
+                app:layout_constraintStart_toStartOf="parent"
+                app:maxImageSize="50dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="right"
+            tools:ignore="MissingConstraints">
+
+<!--            <Button-->
+<!--                android:id="@+id/btnStop"-->
+<!--                android:layout_width="45dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:layout_marginEnd="14dp"-->
+<!--                android:layout_marginRight="14dp"-->
+<!--                android:foreground="@drawable/stop"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.95"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginRight="14dp"
+                android:backgroundTint="@color/white"
+                android:foreground="@drawable/stop"
+                android:onClick="stopPressed"
+                app:backgroundTint="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </RelativeLayout>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
